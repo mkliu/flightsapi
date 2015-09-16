@@ -91,7 +91,8 @@ app.get('/getflight/:userid', function (req, res, next) {
     res.json(probabilityHash[bucket])
 });
 
-var port = 3033
+var port = process.env.PORT || 3033
+
 app.listen(port);
 
 console.log("Server started on port", port)
